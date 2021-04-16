@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" href = "csl.css">
+		<link rel = "stylesheet" href = "csl-alt.css">
+	</head>
+	<body>
+		
+		<title>Stock Portfolio</title>
+		<!-- <center><img alt="csl-logo.jpg" src="csl-logo.jpg"></center>
+		<center><a href = "partners.html">CSL Service Partners</a></center>
+		<center><a href = "volunteer.html">CSL volunteer Form</a></center>
+		<center><a href = "index.html">CSL Introduction</a></center> -->
+<center><h1>Stock Portfolio</h1></center>
+		<table style = "width: 100%">
+			<tr>
+				<td style = "text-align:center"></td>
+				<th>Ticker</th>
+				<th>Shares</th>
+				<th>Price</th>
+				<th>Investment</th>
+				<th>Market Value</th>
+				<th>Gain %</th>
+				<th>Gain $</th>
+			</tr>
+			<tr>
+				<td style = "text-align:right"></td>
+				<td><a href = https://www.google.com/finance/quote/TSLA:NASDAQ?sa=X&ved=2ahUKEwjQ87LD6YHwAhUYXc0KHVU7BDcQ3ecFMAB6BAgQEBI>TSLA</a></td>
+				<td>10</td>
+				<td>738.85</td>
+				<td>$ 3000</td>
+				<td>$ 7,388.5</td>
+				<td>246.28 %</td>
+				<td>$ 4388.5</td>
+			</tr>
+		</table>
+		<form action = "demo.php" method = "post" id = "form">
+			<label for="ticker">Ticker:</label>
+			<input type = "text" id = "ticker" name = "ticker" pattern="[A-Z]{1,10}" required><br><br>
+
+			<label for="shares">Shares:</label>
+			<input type = "text" id = "shares" name = "shares" pattern="[0-9]{1,10}" required><br><br>
+
+			<label for="investment">Initial Investment:</label>
+			<input type = "text" id = "investment" name = "investment" pattern= "[0-9]{1,50}" required><br><br>
+			
+			<input type = "submit" value = "Submit">
+		</form>
+		
+	</body>
+<script src = "script.js"></script>
+</html>
