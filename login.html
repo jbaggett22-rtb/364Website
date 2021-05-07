@@ -3,7 +3,16 @@
   <head>
 	<link rel="stylesheet" href="stockcss.css">
 	<script src="script.js"></script>
-	
+	<script>
+		function myFunction() {
+  			var x = document.getElementById("password");
+  			if (x.type === "password") {
+    			x.type = "text";
+  			} else {
+    			x.type = "password";
+  			}
+		}
+	</script>
 
 	<title> Login </title>
 	<meta charset="UTF-8">
@@ -16,10 +25,13 @@
 
 	<center><form action = "homepage.html" method = "post" id = "login">
 	<label for="username"> Username </label>
-	<input id="username" name="username" text="text"><br>
+	<input id="username" name="username" text="text" placeholder="username"><br>
 	
 	<label for="password"> Password </label>
-	<input id="password" name="password" text="text"><br>
+	<input id="password" name="password" text="text" type="password"><br>
+	
+	<!-- An element to toggle between password visibility -->
+	<input type="checkbox" onclick="myFunction()">Show Password<br>
 	
 	<input type="submit" value="Submit"/>
 	</form></center>

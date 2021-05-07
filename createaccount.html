@@ -8,6 +8,24 @@
 		<script type="text/javascript">
 
 		</script>
+		
+		<script type="text/javascript">
+				function myFunction() {
+  					var x = document.getElementById("password");
+  					var y = document.getElementById("confirmpassword");
+  					if (x.type === "password") {
+    					x.type = "text";
+  					} else {
+    					x.type = "password";
+  					}
+  					
+  					if (y.type === "password") {
+    					y.type = "text";
+  					} else {
+    					y.type = "password";
+  					}
+				}
+		</script>
 	</head>
 
 
@@ -29,13 +47,30 @@
 			<h2>Enter the following information</h2>
 
 			<form action="login.html" method="post" name="myForm">
+			
+				<label for="firstname">First Name:</label>
+				<input type="text" id="firstname" name="firstname" required><br><br>
+				
+				<label for="lastname">Last Name:</label>
+				<input type="text" id="lastname" name="lastname" required><br><br>
+				
+				<label for="email">Email:</label>
+				<input type="text" id="email" name="email" required><br><br>
 
 				<label for="username">Username:</label>
 				<input type="text" id="username" name="username" required><br><br>
 
 				<label for="password">Password:</label>
-				<input type="text" id="password" name="password" required><br><br>
-
+				<input type="password" id="password" name="password" required><br><br>
+				
+				<label for="confirmpassword">Confirm Password:</label>
+				<input type="password" id="confirmpassword" name="confirmpassword" required><br><br>
+				
+				<!-- An element to toggle between password visibility -->
+				<input type="checkbox" onclick="myFunction()">Show Password<br>
+				
+				
+				
 				<input type="submit" value ="Submit"/>
 
 			</form>
@@ -43,3 +78,35 @@
 	
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
