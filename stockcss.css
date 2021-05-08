@@ -3,9 +3,10 @@ body {
 }
 h1{
 	color: black;
-	background-color: lightgrey;
+	background-color: #6367bf;
 	border: 5px solid black;
 	width: 25%
+	font-family: Arial, sans-serif;
 }
 p{
 	color: black;
