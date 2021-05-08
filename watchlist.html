@@ -5,29 +5,60 @@
 	</head>
 	<body>
 		
-		<title>Stock Portfolio</title>
-		<p id = "t01">
-		<a href = login.html>Logout</a>
-		</p>
-		<table style = "width: 20%">
+		<title>Watchlist</title>
+		<table id = "toplinks" style = "width: 20%" id="toplinks">
 			<tr>
-			<td><a href = "homepage.html">Homepage</a> </td>
-			<td><a href = "history.html">Transaction History</a> </td>
-			<td><a href = "watchlist.html">Watchlist</a></td>
+				<th colspan="4">Stonks Navigation</th>
 			</tr>
-		
-
-
+			<tr>
+				<td><a href = "homepage.html">Homepage</a> </td>
+				<td><a href = "history.html">Transaction History</a> </td>
+				<td><a href = "watchlist.html">Watchlist</a></td>
+				<td><a href = login.html>Logout</a></td>
+			</tr> 
 		</table>
 		
-		<center><h1>Watch List</h1></center>
+		<center><h1 style="font-family: Arial">Watch List</h1></center>
+		
+		<center><div id="curve_chart" style="width: 800px; height: 400px"></div></center>
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    		<script type="text/javascript">
+     		 google.charts.load('current', {'packages':['corechart']});
+     		 google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        		var data = google.visualization.arrayToDataTable([
+         		 ['Time', 'SPY'],
+         		 ['0930',  419.93],
+         		 ['1000',  421.01],
+         		 ['1100',  422.19],
+         		 ['1200',  422.56],
+			 ['1300',  422.11],
+         		 ['1400',  421.68],
+         		 ['1500',  422.15],
+         		 ['1600',  422.04],
+        		]);
+
+        		var options = {
+          		title: 'S&P 500 Price Action',
+         		curveType: 'function',
+          		legend: { position: 'bottom' }
+       		 };
+
+        		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        		chart.draw(data, options);
+     		 }
+    		</script>
 		
 		
+		
 		<br>
 		<br>
 		<br>
 		<br>
-		<table style = "width: 100%">
+		<table id = "tablewatchlist" style = "width: 100%">
 			<tr>
 				
 				<th>Ticker</th>
@@ -65,7 +96,7 @@
 		</p>
 		<form action = "homepage.html" method = "post" id = "form">
 
-			<label for="ticker1">Ticker:</label>
+			<label id="labelticker" for="ticker1">Ticker:</label>
 			<input type = "text" id = "ticker1" name = "ticker1" pattern="[A-Z]{1,10}" required><br><br>
 
 			
