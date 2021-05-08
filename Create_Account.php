@@ -100,6 +100,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 $connection->close();
+header("Location: login.html"); 
  ?>
 
  </body>
