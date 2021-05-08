@@ -17,10 +17,10 @@
 	<title> Login </title>
 	<meta charset="UTF-8">
 	
-    <center><h1 id = "lgin"> Personal Stock Assistant </h1></center>
+    <center><h1 style="font-family: Arial" id = "lgin"> Personal Stock Assistant </h1></center>
   </head>
 
-  <body>
+  <body style="font-family: Arial;">
 	<p id = "lgin2"> Welcome! please login below </p>
 
 	<center><form action = "homepage.html" method = "post" id = "login">
@@ -28,10 +28,11 @@
 	<input id="username" name="username" text="text" placeholder="username"><br>
 	
 	<label for="password"> Password </label>
-	<input id="password" name="password" text="text" type="password"><br>
+	<input id="password" name="password" text="text" type="password" placeholder="password"><br>
 	
 	<!-- An element to toggle between password visibility -->
-	<input type="checkbox" onclick="myFunction()">Show Password<br>
+	<label for="checkboxshowpassword">Show Password</label>
+	<input id="checkboxshowpassword" type="checkbox" onclick="myFunction()"><br>
 	
 	<input type="submit" value="Submit"/>
 	</form></center>
