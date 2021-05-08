@@ -20,6 +20,39 @@
 		
 		<center><h1>Watch List</h1></center>
 		
+		<center><div id="curve_chart" style="width: 800px; height: 400px"></div></center>
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    		<script type="text/javascript">
+     		 google.charts.load('current', {'packages':['corechart']});
+     		 google.charts.setOnLoadCallback(drawChart);
+
+      		function drawChart() {
+        		var data = google.visualization.arrayToDataTable([
+         		 ['Time', 'SPY'],
+         		 ['0930',  419.93],
+         		 ['1000',  421.01],
+         		 ['1100',  422.19],
+         		 ['1200',  422.56],
+			 ['1300',  422.11],
+         		 ['1400',  421.68],
+         		 ['1500',  422.15],
+         		 ['1600',  422.04],
+        		]);
+
+        		var options = {
+          		title: 'S&P 500 Price Action',
+         		curveType: 'function',
+          		legend: { position: 'bottom' }
+       		 };
+
+        		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        		chart.draw(data, options);
+     		 }
+    		</script>
+		
+		
 		
 		<br>
 		<br>
